@@ -1,0 +1,81 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Customizable Profile and Addon Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom gradient backgrounds for the buttons and container */
+    .btn-gradient {
+      background: linear-gradient(180deg, #7ee8fa 0%, #2a64c7 100%);
+      border-color: #5a7ff9;
+    }
+    .container-gradient {
+      background: linear-gradient(180deg, #7ee8fa 0%, #2a64c7 100%);
+      border-color: #5a7ff9;
+    }
+  </style>
+ </head>
+ <body class="bg-teal-800 min-h-screen flex flex-col items-center p-6 overflow-y-auto">
+  <!-- Profile photo circle -->
+  <div aria-label="Profile photo placeholder circle with text" class="flex items-center justify-center rounded-full bg-orange-500 w-40 h-40 mb-6 mx-auto">
+   <img alt="Profile photo placeholder image with orange background and text 'Foto Profil'" class="rounded-full w-40 h-40 object-cover" height="160" id="profilePhoto" src="https://storage.googleapis.com/a1aa/image/cf51e714-3f6a-403b-2dd6-47ef40c1cb81.jpg" width="160"/>
+  </div>
+  <!-- TikTok logo circle with link -->
+  <a aria-label="TikTok profile link" class="flex items-center justify-center rounded-full bg-orange-500 w-20 h-20 mb-10 mx-auto" href="https://www.tiktok.com/@yourusername" id="tiktokLink" rel="noopener noreferrer" target="_blank">
+   <img alt="TikTok logo placeholder image with orange background and text 'Logo tiktok dan bisa di klik'" class="rounded-full w-20 h-20 object-cover" height="80" id="tiktokLogo" src="https://storage.googleapis.com/a1aa/image/bd9936ac-081c-400b-6fca-c7cf754278e5.jpg" width="80"/>
+  </a>
+  <!-- Search feature button -->
+  <button class="btn-gradient border-4 rounded-3xl w-full max-w-md py-6 mb-10 font-extrabold text-black text-3xl" type="button">
+   (Fitur Penelusuran)
+  </button>
+  <!-- Addon container -->
+  <div class="container-gradient border-4 rounded-3xl w-full max-w-md p-6 flex flex-col items-center space-y-6">
+   <h2 class="font-extrabold text-black text-3xl text-center" id="addonName">
+    (Nama Addon)
+   </h2>
+   <a class="btn-gradient border-4 rounded-3xl px-8 py-2 font-extrabold text-black text-2xl" href="https://example.com/download" id="downloadLink" rel="noopener noreferrer" target="_blank">
+    (Link download)
+   </a>
+   <img alt="Minecraft addon image showing villagers and soldiers in a village setting with text Villager Soldier Vanilla" class="rounded-md max-w-full h-auto" height="300" id="addonImage" src="https://storage.googleapis.com/a1aa/image/2cd10b3a-5637-4019-83e2-190bf1f34b21.jpg" width="600"/>
+  </div>
+  <script>
+   // Example of how to customize the content dynamically
+    // You can replace these values with your own or fetch from an API
+
+    // Customize profile photo URL
+    const profilePhotoUrl = "https://placehold.co/160x160/png?text=Custom+Profile";
+    document.getElementById("profilePhoto").src = profilePhotoUrl;
+
+    // Customize TikTok profile URL and logo image
+    const tiktokProfileUrl = "https://www.tiktok.com/@yourcustomusername";
+    const tiktokLogoUrl = "https://placehold.co/80x80/png?text=Custom+TikTok+Logo";
+    const tiktokLink = document.getElementById("tiktokLink");
+    tiktokLink.href = tiktokProfileUrl;
+    document.getElementById("tiktokLogo").src = tiktokLogoUrl;
+
+    // Customize addon name
+    const addonName = "(Addon Minecraft Villager Soldier)";
+    document.getElementById("addonName").textContent = addonName;
+
+    // Customize download link URL and text
+    const downloadUrl = "https://example.com/custom-download-link";
+    const downloadText = "(Download Addon)";
+    const downloadLink = document.getElementById("downloadLink");
+    downloadLink.href = downloadUrl;
+    downloadLink.textContent = downloadText;
+
+    // Customize addon image URL and alt text
+    const addonImageUrl = "https://placehold.co/600x300/png?text=Custom+Addon+Image";
+    const addonImageAlt =
+      "Custom Minecraft addon image showing villagers and soldiers in a village setting";
+    const addonImage = document.getElementById("addonImage");
+    addonImage.src = addonImageUrl;
+    addonImage.alt = addonImageAlt;
+  </script>
+ </body>
+</html>
