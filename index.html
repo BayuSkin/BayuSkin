@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>Bayu Addons</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayu Addon Collection</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      padding: 0;
-      background-color: #006666;
-      font-family: sans-serif;
-      color: #000;
-      height: 100vh;
-      overflow-y: scroll;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #fce4ec);
+      color: #333;
     }
     .container {
-      max-width: 480px;
+      max-width: 500px;
       margin: auto;
-      padding: 20px 10px;
+      padding: 30px 15px;
     }
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      background-color: orange;
       display: block;
-      margin: 30px auto 10px;
+      margin: 0 auto 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
     .tiktok-icon {
-      width: 50px;
+      width: 45px;
+      margin: 0 auto 20px;
       display: block;
-      margin: 0 auto 30px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
     .search-box {
       display: block;
-      margin: 10px auto 30px;
-      padding: 12px;
-      width: 90%;
+      width: 100%;
       max-width: 300px;
+      margin: 0 auto 25px;
+      padding: 12px;
       font-size: 16px;
       border-radius: 12px;
-      border: none;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .addon-card {
-      background: linear-gradient(to bottom, #66ccff, #3399ff);
-      border-radius: 20px;
+      background-color: #ffffffcc;
+      border-radius: 15px;
       padding: 15px;
-      margin: 20px auto;
-      max-width: 100%;
-      color: #000;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.2s ease;
+    }
+    .addon-card:hover {
+      transform: scale(1.02);
     }
     .addon-title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
+      margin-bottom: 10px;
     }
     .addon-link {
-      display: inline-block;
-      margin: 10px 0;
-      padding: 10px 20px;
-      background-color: #2222ff;
+      background-color: #2196f3;
       color: white;
       text-decoration: none;
+      padding: 10px 18px;
       border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .addon-link:hover {
+      background-color: #1976d2;
     }
     .addon-img {
       width: 100%;
@@ -76,36 +85,39 @@
 </head>
 <body>
   <div class="container">
-    <!-- FOTO PROFIL -->
-    <img src="https://your-link.com/foto.png" alt="Foto Profil" class="profile-img" />
-
-    <!-- LOGO TIKTOK -->
+    
+    <!-- Foto Profil -->
+    <img src="https://your-link.com/profil.png" class="profile-img" alt="Foto Profil">
+    
+    <!-- TikTok -->
     <a href="https://tiktok.com/@yourusername" target="_blank">
-      <img src="https://img.icons8.com/color/48/tiktok--v1.png" alt="TikTok" class="tiktok-icon" />
+      <img src="https://img.icons8.com/color/48/tiktok--v1.png" class="tiktok-icon" alt="TikTok">
     </a>
 
-    <!-- FITUR PENCARIAN -->
+    <!-- Judul -->
+    <h1>Bayu Addons</h1>
+
+    <!-- Search Box -->
     <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cari addon...">
 
-    <!-- DAFTAR ADDON -->
+    <!-- Daftar Addon -->
     <div id="addonList">
-      
-      <!-- Contoh Addon 1 -->
+
+      <!-- Contoh Addon -->
       <div class="addon-card">
         <div class="addon-title">Villager Soldier</div>
         <a href="https://example.com/villager.mcaddon" class="addon-link" target="_blank">Download</a>
         <img src="https://i.imgur.com/5OKK9ai.jpg" class="addon-img" alt="Villager Soldier">
       </div>
 
-      <!-- Contoh Addon 2 -->
       <div class="addon-card">
         <div class="addon-title">Zombie Apocalypse</div>
         <a href="https://example.com/zombie.mcaddon" class="addon-link" target="_blank">Download</a>
         <img src="https://i.imgur.com/Z6nUkTm.jpeg" class="addon-img" alt="Zombie Addon">
       </div>
 
-      <!-- Tambah addon baru di sini -->
-      <!-- Copy-paste template ini:
+      <!-- Tambah addon lagi di bawah ini -->
+      <!-- Template:
       <div class="addon-card">
         <div class="addon-title">Nama Addon</div>
         <a href="LINK_DOWNLOAD" class="addon-link" target="_blank">Download</a>
@@ -116,7 +128,7 @@
     </div>
   </div>
 
-  <!-- SCRIPT PENCARIAN -->
+  <!-- Script Search -->
   <script>
     const searchInput = document.getElementById("searchInput");
     searchInput.addEventListener("input", function () {
